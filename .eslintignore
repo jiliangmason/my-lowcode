@@ -1,0 +1,13 @@
+node_modules
+*.log
+build
+lib
+es
+tools
+dist
+.vscode
+.idea
+*.md
+*.json
+*.spec.ts
+.eslintrc.js

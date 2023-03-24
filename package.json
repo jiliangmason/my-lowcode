@@ -1,0 +1,56 @@
+{
+    "name": "marketing-fe-open-center",
+    "private": true,
+    "scripts": {
+      "dev:open-marketing": "pnpm --filter open-marketing run dev",
+      "dev:react-playground": "pnpm --filter react-playground run dev",
+      "prepare": "husky install",
+      "pre-commit": "lint-staged",
+      "init": "pnpm i"
+    },
+    "engines": {
+      "node": ">=16"
+    },
+    "dependencies": {
+      "@babel/runtime": "^7.19.4"
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^11.0.0",
+      "eslint": "^8.25.0",
+      "husky": "^8.0.1",
+      "lint-staged": "^10.5.4",
+      "pnpm": "^7.13.5",
+      "prettier": "^2.7.1",
+      "stylelint": "^13.13.1",
+      "ts-node": "^8.10.2",
+      "typescript": "^4.5.4"
+    },
+    "workspaces": [
+      "packages",
+      "apps"
+    ],
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "apps/**/*.{ts,tsx,jsx}": [
+        "prettier --write",
+        "eslint --fix"
+      ],
+      "apps/**/*.{vue,js,jsx,ts,tsx}": "eslint --cache --fix",
+      "apps/**/*.{css,less,md}": "prettier --write",
+      "packages/**/*.{ts,tsx,jsx}": [
+        "prettier --write",
+        "eslint --fix"
+      ],
+      "packages/**/*.{vue,js,jsx,ts,tsx}": "eslint --cache --fix",
+      "packages/**/*.{css,less,md}": "prettier --write"
+    },
+    "repository": {
+      "type": "git",
+      "url": ""
+    }
+  }
+  

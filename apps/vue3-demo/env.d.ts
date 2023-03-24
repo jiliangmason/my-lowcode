@@ -1,0 +1,27 @@
+/// <reference types="vite/client" />
+
+declare module '*.vue' {
+    import type { DefineComponent } from 'vue';
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
+    const component: DefineComponent<{}, {}, any>;
+    export default component;
+  }
+  
+  interface ImportMetaEnv {
+    readonly VITE_ENV: 'staging' | 'prod' | 'beta';
+    readonly VITE_CDN: string;
+  }
+  
+  interface ImportMeta {
+    readonly env: ImportMetaEnv;
+    readonly globEager: any;
+  }
+  
+  declare global {
+    interface Window {
+      VConsole: {
+        new (params: any): void;
+      };
+    }
+  }
+  
