@@ -1,7 +1,0 @@
-{
-    "git": {
-      "requireUpstream": false,
-      "commitMessage": "chore: release v${version}"
-    }
-  }
-  

@@ -2,8 +2,7 @@
     "name": "marketing-fe-open-center",
     "private": true,
     "scripts": {
-      "dev:open-marketing": "pnpm --filter open-marketing run dev",
-      "dev:react-playground": "pnpm --filter react-playground run dev",
+      "dev:platform": "pnpm --filter platform run start",
       "prepare": "husky install",
       "pre-commit": "lint-staged",
       "init": "pnpm i"
@@ -27,7 +26,7 @@
     },
     "workspaces": [
       "packages",
-      "apps"
+      "components"
     ],
     "husky": {
       "hooks": {
