@@ -1,4 +1,3 @@
-/// <reference types="react-scripts" />
 declare module 'slash2'
 declare module '*.css'
 declare module '*.less'
